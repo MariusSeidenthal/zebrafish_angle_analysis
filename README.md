@@ -56,10 +56,3 @@ Can be used to further clean up the data. Otherwise, use the data in the raw_ang
 Measured skeleton length (in pixel) is normalized and values above or below the given values are discarded. This may help to avoid artifacts detected during skeletonization.
 
 
-
-#### 5. Analyze Data
-Normalized data will be summarized for each analyzed condition and exported into an XLSX format for further analysis.
-
-Normalized values for each analyzed worm as well as mean, standard error of the mean and n numbers will be given.
-
-When more than 50 % of the datapoints of an animal are omitted, it will be ignored in the statistical analysis and listed separately.
