@@ -50,7 +50,7 @@ After starting, WormRuler will ask to select a ROI. This can be used to avoid ri
 
 WormRuler now also includes bending angle analysis. Check the box and number of angles to calculate per worm per frame. We recommend using 8 angles which are calculated from 10 skeleton points:
 
-<img src="https://imgur.com/iI4kxpk" width="50%" height="50%">
+![](https://i.imgur.com/jpxOjof.png)
 
 
 
