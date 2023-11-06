@@ -1,7 +1,7 @@
 # Zebrafish Angle Analysis
-Analysis of zebrafish bending angle during free swimming. Based on WormRuler (https://github.com/dvettkoe/wormruler).
+Analysis of zebrafish larvae bending angle during free swimming. Based on WormRuler (https://github.com/dvettkoe/wormruler).
 ## Overview 
-This is an open-source python based video analysis tool to analyze the bending angle of _Danio Rerio_, developed by Marius Seidenthal as part of his PhD thesis in the Gottschalk Lab, Goethe University Frankfurt, Germany.
+This is an open-source python based video analysis tool to analyze the bending angle of _Danio Rerio_ larvae, developed by Marius Seidenthal as part of his PhD thesis in the Gottschalk Lab, Goethe University Frankfurt, Germany.
 
 ## Getting started
 
