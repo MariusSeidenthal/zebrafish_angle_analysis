@@ -1,5 +1,5 @@
-# zebrafish_angle_analysis
-Analysis of zebrafish bending angle during free swimming. Based on WormRuler.
+# Zebrafish Angle Analysis
+Analysis of zebrafish bending angle during free swimming. Based on WormRuler (https://github.com/dvettkoe/wormruler).
 ## Overview 
 This is an open-source python based video analysis tool to analyze the bending angle of _Danio Rerio_, developed by Marius Seidenthal as part of his PhD thesis in the Gottschalk Lab, Goethe University Frankfurt, Germany.
 
@@ -7,59 +7,49 @@ This is an open-source python based video analysis tool to analyze the bending a
 
 ### Installation
 
-Download the [latest release](https://github.com/dvettkoe/wormruler/releases/tag/v1.3.0), unzip the folder and start the _"zebrafish_analysis_v*.exe"_.
+Download the [latest release](https://github.com/MariusSeidenthal/zebrafish_angle_analysis/releases/tag/v0.0.4), unzip the folder and start the _"zebrafish_analysis_v*.exe"_.
 
 ### Guide
 
 This tool offers an user-friendly graphical user interface (GUI) that offers a step-by-step guidance for the analysis of single freely swimming fish videos.
 
-![](https://i.imgur.com/VjMOw95.gif)
+![](https://i.imgur.com/c6gy8ov.png)
+![](https://i.imgur.com/QzI89dQ.png)
 
-Each step can be started separately or start all at once.
+Each step can be started separately or start all at once (it is recommended to review results after each step).
 
 #### 1. Select videos to be analyzed
 Select the main directory in which your videos are stored.
 
 (Only supports the following file types: **.avi/.AVI** or **.mov/.MOV**)
-
-**Careful**: A specific structure of folders is required:
-
->	    main folder -> subfolder for condition 1 -> videos of condition 1
->	
->                   -> subfolder for condition 2 -> videos of condition 2
->				        	
->                   ...
->					        
->                   -> subfolder for condition n -> videos of condition n 
->					        
+   
 It is currently only able to analyze a single fish per video.
 
 Users can now start each step one by one or start all step at once by clicking "Start all".
 
 #### 2. Background correction
-Enter Gamma value depending on the brightness of the video. The gamma value should be between 0.7 to 1.3.
+Enter Gamma values depending on the brightness of the video. The gamma value should be between 0.7 to 1.3.
 
-We recommend to start background correction for one video and adjust the gamma value accordingly. The Preview button may be used to test whether the gamma value is appropriate. Background corrected videos should look like above.
+We recommend to start background correction for one video and adjust the gamma value accordingly. The Preview buttosn may be used to test whether the gamma values are appropriate. Background corrected videos should look like above: only the white fish should be visible on black background.
 
 #### 3. Skeletonize
 Adjust the framerate to match the framerate of your videos.
 
 Check the box to override already analyzed videos. This option can be useful, if the gamma value was not adjusted correctly and analysis has to be repeated.
 
-After starting, WormRuler will ask to select a ROI. This can be used to avoid rims and unwanted artifacts in your videos.
+After starting, the program will ask to select a ROI. This can be used to avoid rims and unwanted artifacts in your videos.
 
-WormRuler now also includes bending angle analysis. Check the box and number of angles to calculate per worm per frame. We recommend using 8 angles which are calculated from 10 skeleton points:
+We recommend using 1 angle which is calculated from 3 skeleton points. 
 
-![](https://i.imgur.com/jpxOjof.png)
-
-
+The program automatically detects the the head of the animal and will set the three points for angle calculation as shown above. 
 
 #### 4. Normalize Data
-When using a stimulus in your experiment (e.g. light pulse) insert the time (in seconds) for the start of the pulse.
 
-Measured skeleton length (in pixel) are normalized to this time point.
+Can be used to further clean up the data. Otherwise, use the data in the raw_angle.txt file for analysis.
 
-_If no stimulus was given in the experiment insert any time point for normalization (e.g. 1 s)_
+Measured skeleton length (in pixel) is normalized and values above or below the given values are discarded. This may help to avoid artifacts detected during skeletonization.
+
+
 
 #### 5. Analyze Data
 Normalized data will be summarized for each analyzed condition and exported into an XLSX format for further analysis.
