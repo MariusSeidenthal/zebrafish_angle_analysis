@@ -30,16 +30,22 @@ Users can now start each step one by one or start all step at once by clicking "
 #### 2. Background correction
 Enter Gamma values depending on the brightness of the video. The gamma value should be between 0.7 to 1.3.
 
-We recommend to start background correction for one video and adjust the gamma value accordingly. The Preview buttosn may be used to test whether the gamma values are appropriate. Background corrected videos should look like above: only the white fish should be visible on black background.
+The resolution can be adjusted to speed up the process. It is generally recommended to use 1200 x 800 pixel.
+
+After starting, the program will ask to select a ROI. This can be used to avoid rims and unwanted artifacts in your videos. The rectangular ROI should be drawn to cover the whole arena.
+
+We recommend to start background correction for one video and adjust the gamma values accordingly. The preview buttons may be used to test whether the gamma values are appropriate.
+
+The plate preview should be used to see whether the entered Gamma value is sufficient to correctly detect the arena in which the animal is allowed to move. This is crucial to avoid artifacts.
+
+Background corrected videos should look like above: only the white fish should be visible on black background.
 
 #### 3. Skeletonize
 Adjust the framerate to match the framerate of your videos.
 
 Check the box to override already analyzed videos. This option can be useful, if the gamma value was not adjusted correctly and analysis has to be repeated.
 
-After starting, the program will ask to select a ROI. This can be used to avoid rims and unwanted artifacts in your videos.
-
-We recommend using 1 angle which is calculated from 3 skeleton points. 
+We recommend using 1 angle which is calculated from 3 skeleton points (from the swimm bladder to the tail tip). 
 
 The program automatically detects the the head of the animal and will set the three points for angle calculation as shown above. 
 
